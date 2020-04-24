@@ -3,7 +3,7 @@
 
 **Clone the repository**
 ```
-$ git clone https://gitlab.programista.pro/goals/mogo.git
+$ git clone https://github.com/VangelHristov/mogo-landing-page-template.git
 ```
 **Install dependencies**
 ```
