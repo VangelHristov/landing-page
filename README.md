@@ -1,4 +1,7 @@
 # MoGo One Page Template
+
+Prerequisite: **Node.js v10.16.0**
+
 ## Instructions
 
 **Clone the repository**
