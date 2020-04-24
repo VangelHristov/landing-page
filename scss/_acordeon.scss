@@ -1,0 +1,131 @@
+@import 'variables';
+@import 'extends';
+
+.container.accordion-container {
+	display: flex;
+	justify-content: space-between;
+
+	img {
+		width: calc(100% / 2 - 1.5625vw);
+	}
+
+	.accordion {
+		flex-basis: calc(100% / 2 - 1.5625vw);
+
+		.accordion-item:not(:first-of-type) {
+			margin-top: 0.8em;
+		}
+
+		.accordion-item {
+			border-left: 1px solid $very_light_gray;
+			border-right: 1px solid $very_light_gray;
+		}
+
+		input {
+			display: none;
+		}
+
+		label {
+			display: flex;
+			justify-content: space-between;
+			height: 4em;
+			cursor: pointer;
+			border-top: 1px solid $very_light_gray;
+			border-bottom: 1px solid $very_light_gray;
+			user-select: none;
+			padding: 1em 1em 0 1em;
+
+			img {
+				flex: 5%;
+			}
+		}
+
+		.accordion-title {
+			flex: 1 1 80%;
+			font: 1em 'Montserrat Regular', sans-serif;
+			text-transform: uppercase;
+			margin-left: 10px;
+			line-height: 3em;
+			color: $very_dark_gray;
+		}
+
+		.arrow {
+			background-color: transparent;
+			border-left: 2px solid #ccc;
+			border-bottom: 2px solid #ccc;
+			height: 12px;
+			width: 12px;
+			margin-right: 10px;
+			transform: rotate(-45deg);
+		}
+
+		.content-wrapper {
+			scrollbar-color: $soft_cyan $white_smoke;
+			scrollbar-width: 5px;
+			display: none;
+			border-bottom: 1px solid $very_light_gray;
+			transition: display, 1s ease-in-out;
+		}
+
+		.accordion-content {
+			font-size: 0.9em;
+			font-family: 'Roboto LightItallic', sans-serif;
+			color: $dark_gray;
+			overflow-y: scroll;
+			margin: 1.75em;
+
+			&::-webkit-scrollbar {
+				width: 5px;
+			}
+
+			&::-webkit-scrollbar-track {
+				-webkit-box-shadow: inset 0 0 6px $white_smoke;
+				-webkit-border-radius: 0;
+				border-radius: 0;
+			}
+
+			&::-webkit-scrollbar-thumb {
+				-webkit-border-radius: 0;
+				border-radius: 0;
+				background: #95e1d3;
+				-webkit-box-shadow: inset 0 0 6px $soft_cyan;
+			}
+
+			&::-webkit-scrollbar-button {
+				display: none;
+			}
+
+			span {
+				display: block;
+				padding-right: 1.25em;
+				max-height: 8.5em;
+				line-height: 1.466667em;
+			}
+		}
+
+		input:checked ~ .content-wrapper {
+			display: block;
+			transition: display, 1s ease-in-out;
+		}
+
+		input:not(:checked) ~ label .arrow {
+			margin-top: 20px;
+			transform: rotate(135deg);
+		}
+
+	}
+}
+
+@media screen and (max-width: 676px) {
+	.container.accordion-container {
+		flex-wrap: wrap;
+
+		.accordion {
+			flex-basis: 100%;
+		}
+
+		img {
+			width: 100%;
+		}
+	}
+}

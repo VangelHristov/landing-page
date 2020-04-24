@@ -1,0 +1,195 @@
+@import 'variables.scss';
+@import 'mixins';
+@import 'extends';
+@import 'fonts';
+
+.nav-container {
+	position: fixed;
+	width: 100%;
+	top: 0;
+	z-index: 10;
+}
+
+nav {
+	max-width: $container_width;
+	position: relative;
+	@extend %center;
+	display: flex;
+	font-family: 'Montserrat Regular', sans-serif;
+
+	a {
+		text-decoration: none;
+	}
+}
+
+nav .logo,
+nav .nav-links .link,
+nav .nav-icons .fas {
+	padding: 1rem;
+}
+
+nav .logo {
+	height: 1.53em;
+	width: 5.73em;
+}
+
+nav .logo img {
+	max-width: 100%;
+	height: auto;
+}
+
+nav .logo {
+	flex-grow: 2;
+	align-self: center;
+}
+
+nav .nav-links {
+	flex-grow: 1;
+	align-self: flex-end;
+}
+
+nav .nav-icons {
+	flex-grow: 0;
+}
+
+nav .nav-links,
+nav .nav-icons {
+	display: flex;
+}
+
+nav .nav-links .link a,
+nav .nav-icons .fas {
+	color: $white;
+	@extend %bold_uppercase;
+}
+
+nav .nav-links .link a,
+nav .nav-icons .fas {
+	font-size: 0.8em;
+	align-self: flex-end;
+	cursor: pointer;
+}
+
+nav .nav-links .link {
+	flex: 0 1 7em;
+}
+
+nav div.nav-links div.link.active a {
+	color: $soft_yellow;
+	border-bottom: 1px solid $soft_yellow;
+}
+
+@media screen and (max-width: 630px) {
+	nav {
+		background-color: $nav_background;
+	}
+	nav,
+	nav .nav-links,
+	nav .nav-icons {
+		display: block;
+	}
+
+	.nav-links .link,
+	.nav-icons .fas {
+		text-align: center;
+		width: 100%;
+		display: block;
+		border-bottom: 1px solid $light_gray;
+		@include padding-x(0);
+	}
+
+	nav div.nav-links div.link.active a {
+		border: none;
+	}
+
+	.hide {
+		display: none !important;
+	}
+
+	nav [hidden],
+	.logo {
+		display: inline-block;
+	}
+
+	.sidebarIconToggle a {
+		display: block;
+	}
+
+	input[type='checkbox']:checked ~ #sidebarMenu {
+		transform: translateX(0);
+	}
+
+	input[type='checkbox'] {
+		transition: all 0.3s;
+		box-sizing: border-box;
+		display: none;
+	}
+
+	nav {
+		overflow: auto;
+	}
+
+	.sidebarIconToggle {
+		display: inline-block;
+		transition: all 0.3s;
+		box-sizing: border-box;
+		cursor: pointer;
+		z-index: 3;
+		float: right;
+		margin-right: 1em;
+		margin-top: 1em;
+		height: 1.5em;
+		width: 1.5em;
+	}
+
+	.spinner {
+		transition: all 0.3s;
+		box-sizing: border-box;
+		position: absolute;
+		height: 3px;
+		width: 100%;
+		background-color: #fff;
+	}
+
+	.horizontal {
+		transition: all 0.3s;
+		box-sizing: border-box;
+		position: relative;
+		float: left;
+		margin-top: 3px;
+	}
+
+	.diagonal.part-1 {
+		position: relative;
+		transition: all 0.3s;
+		box-sizing: border-box;
+		float: left;
+	}
+	.diagonal.part-2 {
+		transition: all 0.3s;
+		box-sizing: border-box;
+		position: relative;
+		float: left;
+		margin-top: 3px;
+	}
+
+	input[type='checkbox']:checked ~ .sidebarIconToggle > .horizontal {
+		transition: all 0.3s;
+		box-sizing: border-box;
+		opacity: 0;
+	}
+
+	input[type='checkbox']:checked ~ .sidebarIconToggle > .diagonal.part-1 {
+		transition: all 0.3s;
+		box-sizing: border-box;
+		transform: rotate(135deg);
+		margin-top: 8px;
+	}
+
+	input[type='checkbox']:checked ~ .sidebarIconToggle > .diagonal.part-2 {
+		transition: all 0.3s;
+		box-sizing: border-box;
+		transform: rotate(-135deg);
+		margin-top: -9px;
+	}
+}

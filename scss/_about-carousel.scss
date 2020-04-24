@@ -1,0 +1,160 @@
+@import 'fonts';
+@import 'variables';
+@import 'mixins';
+@import 'extends';
+
+.heading {
+	font: 3.5vw 'KaushanScript Regular';
+	text-align: center;
+	height: max-content;
+	margin-top: 8vw;
+}
+
+.heading-big {
+	font: 7vw 'Montserrat Bold';
+	line-height: 6vw;
+	text-transform: uppercase;
+	max-width: 45vw;
+	text-align: center;
+	height: max-content;
+	margin-top: 2vw;
+}
+
+.carousel-content {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	height: 100%;
+
+	.underline-container,
+	.learn-more {
+		margin-top: 3vw;
+	}
+}
+
+.learn-more {
+	font: normal 1em 'Montserrat Regular';
+	line-height: 0.7em;
+	border: 3px solid $white;
+	width: 12vw;
+	height: 3.3vw;
+	background-color: transparent;
+	color: $white;
+	text-align: center;
+	text-transform: uppercase;
+	padding: 1em;
+}
+
+.underline-container,
+.learn-more {
+	display: block;
+	@include margin-x(auto);
+}
+
+@media screen and (max-width: 1500px) {
+	.learn-more {
+		width: 20vw;
+		height: 4.5vw;
+		font-size: 1.2em;
+		padding: 0.5em;
+	}
+}
+
+@media screen and (max-width: 850px) {
+	.learn-more {
+		width: 40vw;
+		height: max-content;
+	}
+
+	.index-container {
+		display: none !important;
+	}
+}
+
+@media screen and (max-width: 590px) {
+	.learn-more {
+		font-size: 1em;
+		text-transform: capitalize;
+	}
+}
+
+.index-container {
+	margin-top: 3vw;
+	display: flex;
+	justify-content: space-between;
+	width: 97%;
+}
+
+.index {
+	border-left: 0.75em solid transparent;
+	border-right: 0.75em solid transparent;
+	flex: 20%;
+	font-size: 0.8em;
+	font-weight: lighter;
+	text-transform: uppercase;
+	opacity: 0.5;
+	font-family: 'Montserrat Regular', sans-serif;
+
+	span {
+		font-weight: bold;
+		font-size: 1.3em;
+	}
+
+	.progress {
+		width: 25%;
+		height: 100%;
+	}
+
+	&.current {
+		opacity: 1;
+		transition: all 1s ease-in-out;
+
+		.progress {
+			background: $soft_red;
+		}
+
+		&.intro .progress {
+			margin-left: 0;
+		}
+
+		&.work .progress {
+			margin-left: 25%;
+		}
+
+		&.about .progress {
+			margin-left: 50%;
+		}
+
+		&.contacts .progress {
+			margin-left: 75%;
+		}
+
+		.progress {
+			transition: all 1s ease-in;
+		}
+	}
+
+	.indicator {
+		margin-bottom: 2em;
+		height: 3px;
+		background: $white;
+	}
+}
+
+.slide-left {
+	transition: all 1.2s;
+	position: relative;
+	animation: animate-left 1.2s;
+}
+
+@keyframes animate-left {
+	from {
+		left: -300px;
+		opacity: 0;
+	}
+	to {
+		left: 0;
+		opacity: 1;
+	}
+}

@@ -1,0 +1,19 @@
+@mixin padding-x($value) {
+	padding-left: $value !important;
+	padding-right: $value !important;
+}
+
+@mixin padding-y($value) {
+	padding-top: $value !important;
+	padding-bottom: $value !important;
+}
+
+@mixin margin-x($value) {
+	margin-left: $value !important;
+	margin-right: $value !important;
+}
+
+@mixin margin-y($value) {
+	margin-top: $value !important;
+	margin-bottom: $value !important;
+}

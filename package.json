@@ -1,0 +1,25 @@
+{
+	"name": "mogo",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.html",
+	"scripts": {
+		"develop": "./node_modules/.bin/gulp develop",
+		"start": "./node_modules/.bin/gulp start"
+	},
+	"author": "Vangel Hristov",
+	"license": "MIT",
+	"devDependencies": {
+		"gulp": "^4.0.2",
+		"gulp-clean": "^0.4.0",
+		"gulp-clean-css": "^4.2.0",
+		"gulp-concat": "^2.6.1",
+		"gulp-rename": "^1.4.0",
+		"gulp-sass": "^4.0.2",
+		"gulp-terser": "^1.2.0",
+		"live-server": "^1.2.1"
+	},
+	"dependencies": {
+		"@fortawesome/fontawesome-free": "^5.11.2"
+	}
+}

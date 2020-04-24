@@ -1,0 +1,65 @@
+@import 'variables';
+
+.cards-container {
+	display: flex;
+	justify-content: space-between;
+
+	.card {
+		width: calc(100% / 3 - 1.526vw);
+		margin-bottom: 7.5rem;
+	}
+
+	img {
+		width: 100%;
+	}
+
+	.card-img {
+		width: 100%;
+		height: 100%;
+		position: relative;
+		background-color: $soft_cyan;
+
+		.img-container {
+			position: relative;
+
+			.overlay-gradient {
+				z-index: -2;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+			}
+
+			&:hover {
+				left: -0.666rem;
+				top: -0.666rem;
+
+				.overlay-gradient {
+					z-index: 2;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 760px) {
+	.cards-container {
+		display: block;
+
+		.card {
+			display: block;
+			width: 100%;
+			margin-bottom: 0;
+		}
+
+		.card-img {
+			background: none;
+		}
+	}
+	.cards-container .card-img .img-container {
+		&:hover {
+			left: 0;
+			top: 0;
+		}
+	}
+}

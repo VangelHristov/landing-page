@@ -1,0 +1,43 @@
+@import 'mixins';
+@import 'variables';
+
+%gradient {
+	background: rgba(243, 129, 129, 0.9);
+	background: linear-gradient(
+					180deg,
+					rgba(243, 129, 129, 0.9) 0%,
+					rgba(252, 227, 138, 0.9) 100%
+	);
+}
+
+%bold_uppercase {
+	text-transform: uppercase;
+	font-weight: bold;
+}
+
+%center {
+	@include margin-x(auto);
+	left: 0;
+	right: 0;
+}
+
+%muted-text {
+	font-size: 1em;
+	font-family: 'Roboto Regular', sans-serif;
+	color: $light_gray;
+}
+
+%absolute-middle {
+	left: 0;
+	right: 0;
+	@include margin-x(auto);
+}
+
+%user-select-none {
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
