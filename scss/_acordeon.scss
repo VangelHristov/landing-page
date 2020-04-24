@@ -50,11 +50,7 @@
 		}
 
 		.arrow {
-			background-color: transparent;
-			border-left: 2px solid #ccc;
-			border-bottom: 2px solid #ccc;
-			height: 12px;
-			width: 12px;
+			@include arrow(12px, 12px, 2px);
 			margin-right: 10px;
 			transform: rotate(-45deg);
 		}

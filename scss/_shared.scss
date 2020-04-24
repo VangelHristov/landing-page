@@ -50,3 +50,43 @@
 	color: $very_dark_gray;
 	margin-bottom: 1.333em;
 }
+
+.bg-white-smoke {
+	background-color: $white_smoke;
+}
+
+.img-responsive {
+	max-width: 100%;
+	height: auto;
+}
+
+.relative {
+	position: relative;
+}
+
+.montesrrat-regular {
+	font-family: "Montserrat Regular", sans-serif;
+}
+
+.roboto-lightitallic {
+	font-family: "Roboto LightItallic", sans-serif;
+}
+
+.flex-container {
+	@extend .container;
+	display: flex;
+}
+
+.absolute {
+	position: absolute;
+}
+
+.red-dash {
+	margin-top: 1.5333em;
+	width: 4rem;
+	height: 3px;
+	background-color: $soft_red;
+	display: inline-block;
+	margin-bottom: 0.25em;
+}
+

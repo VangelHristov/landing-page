@@ -75,7 +75,7 @@
 	}
 }
 
-@media screen and (max-width: 760px) {
+@media screen and (max-width: 576px) {
 	#about .overlay-gradient {
 		i {
 			font-size: 5vw;
@@ -87,9 +87,7 @@
 			text-transform: uppercase;
 		}
 	}
-}
 
-@media screen and (max-width: 576px) {
 	.achievements-container .container {
 		display: block;
 	}
@@ -100,16 +98,9 @@
 
 	.achievement {
 		display: block;
-		width: 50%;
-		@include padding-y(0.5rem);
 		border-bottom: 1px solid $white;
-		text-align: right;
-
-		&:nth-child(2n) {
-			text-align: left;
-			margin-left: 50%;
-			border-left: none;
-		}
+		text-align: center;
+		line-height: 3em;
 
 		.achievement-count {
 			font-size: 5vw;

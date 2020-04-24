@@ -1,0 +1,21 @@
+@import 'variables';
+
+footer .container {
+	font-size: 1em;
+
+	hr {
+		color: $dark_gray;
+		margin: 0;
+	}
+
+	div {
+		text-align: center;
+		color: $very_dark_gray;
+		padding-top: 1.6em;
+		padding-bottom: 1.466666667em;
+
+		span {
+			color: $soft_red;
+		}
+	}
+}

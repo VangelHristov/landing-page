@@ -17,3 +17,11 @@
 	margin-top: $value !important;
 	margin-bottom: $value !important;
 }
+
+@mixin arrow($width, $height, $border) {
+	background-color: transparent;
+	border-left: $border solid #ccc;
+	border-bottom: $border solid #ccc;
+	height: $height;
+	width: $width;
+}

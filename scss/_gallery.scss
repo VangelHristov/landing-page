@@ -1,0 +1,39 @@
+.some-of-our-work {
+	margin-top: 6rem;
+
+	#gallery {
+		display: flex;
+	}
+
+	.gallery-column {
+		margin: 0;
+		padding: 0;
+
+		img {
+			display: block;
+			max-width: 100%;
+		}
+
+		.gallery-item {
+			.overlay-gradient {
+				z-index: -2;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+				font-size: 0.75rem;
+
+				* {
+					margin-bottom: 10px;
+				}
+			}
+
+			&:hover {
+
+				.overlay-gradient {
+					z-index: 2;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,29 @@
+#work article.bg-white-smoke {
+	margin-top: 4rem;
+}
+
+.companies-logos {
+	height: 13.02vw;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	.logos {
+		flex-basis: calc(100% / 6);
+
+		img {
+			width: 70%;
+		}
+	}
+}
+
+@media screen and (max-width: 576px) {
+	.companies-logos {
+		height: auto;
+		flex-wrap: wrap;
+
+		.logos {
+			flex-basis: calc(100% / 3);
+		}
+	}
+}

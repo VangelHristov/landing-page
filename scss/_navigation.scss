@@ -106,9 +106,9 @@ nav div.nav-links div.link.active a {
 		display: none !important;
 	}
 
-	nav [hidden],
+	nav .sidebarIconToggle[hidden],
 	.logo {
-		display: inline-block;
+		display: inline-block !important;
 	}
 
 	.sidebarIconToggle a {
